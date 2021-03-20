@@ -11,6 +11,8 @@ function Card(props) {
                <div className="card-price">{props.prod.price}</div>
                <Button
                    setBought={props.setBought}
+                   id={props.prod.id}
+                   bought={props.prod.bought}
                />
            </div>
         </div>

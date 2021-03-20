@@ -81,13 +81,19 @@ function App() {
     ]);
 
 
-    function setBought(i) {
-        // const ww = database.map(function (item) {
-        //     if (item.id === i){
-        //         return [...database, {bought: true}]
-        //     }
-        // })
-        // setDatabase(ww)
+    function setBought(id) {
+        const ww = database.map(function (item) {
+            if (item.id === id){
+                return {
+                    ...item,
+                    bought: true
+                }
+            }
+            return {
+                ...item
+            }
+        })
+        setDatabase(ww)
 
     }
 

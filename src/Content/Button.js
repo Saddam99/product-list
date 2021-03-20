@@ -2,15 +2,21 @@ import React from 'react';
 
 function Button(props) {
 
-
     return (
         <div className="card-button">
+            {props.bought === false ?
             <button
                 className="btn"
-                id={props.id}
-                onClick={props.setBought}>
+                onClick={() => props.setBought(props.id)}>
                 Добавить в корзину
-            </button>
+            </button> :
+                <button
+                    disabled
+                    className="btn"
+                    onClick={() => props.setBought(props.id)}>
+                    Добавить в корзину
+                </button>
+            }
         </div>
     );
 }
