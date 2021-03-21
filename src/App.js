@@ -80,21 +80,19 @@ function App() {
         }
     ]);
 
-
     function setBought(id) {
         const ww = database.map(function (item) {
             if (item.id === id){
-                return {
-                    ...item,
-                    bought: true
+                    return {
+                        ...item,
+                        bought: true
+                    }
                 }
-            }
             return {
                 ...item
             }
         })
         setDatabase(ww)
-
     }
 
   return (

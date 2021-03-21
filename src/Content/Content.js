@@ -10,14 +10,11 @@ function Content(props) {
                 return(
                     <Card
                         key={index}
-                        prod={item}
+                        product={item}
                         setBought={props.setBought}
-                        product={props.product}
-
                     />
                 )
             })}
-
         </div>
     );
 }

@@ -4,15 +4,15 @@ function Card(props) {
     return (
        <div className="card">
            <div className="card-image">
-               <img src={props.prod.image} alt=""/>
+               <img src={props.product.image} alt=""/>
            </div>
            <div className="card-info">
-               <div className="card-name">{props.prod.name}</div>
-               <div className="card-price">{props.prod.price}</div>
+               <div className="card-name">{props.product.name}</div>
+               <div className="card-price">{props.product.price}</div>
                <Button
                    setBought={props.setBought}
-                   id={props.prod.id}
-                   bought={props.prod.bought}
+                   id={props.product.id}
+                   bought={props.product.bought}
                />
            </div>
         </div>
